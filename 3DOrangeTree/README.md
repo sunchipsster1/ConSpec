@@ -6,10 +6,12 @@
 ## Information
 This code is built on top of the basic PPO code was taken from the public repository: https://github.com/ikostrikov/pytorch-a2c-ppo-acktr-gail
 
+The 3D environments were built in SilicoLabs Experimenter software (https://www.silicolabs.ca/), which is based on Unity. 
+
 
 ## Installation
 All the requirements to create an environment are in the requirements.txt file
-Make sure also to unzip the 3 Unity environment files. 
+Make sure also to unzip the 3 environment binary files. 
 In main.py --> modify the directory line 52 to go to where the environment file is located. 
 
 
