@@ -3,7 +3,7 @@
 
 # Contrastive Introspection (ConSpec) 
 
-### Sun, Yang, Alsbury-Nealy, Bengio, Richards 2022
+### Chen Sun, Wannan Yang, Benjamin Alsbury-Nealy, Yoshua Bengio, Blake Richards 2022
 
 This repository implements contrastive introspection (ConSpec) as detailed in the paper: 
 
