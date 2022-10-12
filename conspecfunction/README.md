@@ -44,8 +44,8 @@ conspecfunction = conspecfunctionx(...)
 ```
 obstotal, rewardtotal, recurrent_hidden_statestotal, actiontotal,  maskstotal  = rollouts.release()
 
-rewardtotalintrisic  = conspecfunction.storeandupdate(obstotal, recurrent_hidden_statestotal, actiontotal,  rewardtotal, maskstotal, j) #j is # iterations
+rewardtotalintrisic  = conspecfunction.storeandupdate(obstotal, recurrent_hidden_statestotal, actiontotal,  rewardtotal, maskstotal, j) # where j is the # of training iterations so far
 
 rollouts.storeintrinsic(rewardtotalintrisic)
 ```
-Note that conspecfunction.storeandupdate outputs the intrinsic rewards for the current minibatch, which must be added to the RL agent's reward buffer for this minibatch. This is the purpose of the 3rd line in (3) above. 
+The 1st line collects the current minibatch. The 2nd line stores it within the conspecfunction object and runs 1 gradient update on ConSpec. Note that conspecfunction.storeandupdate outputs the intrinsic rewards for the current minibatch, which must be added to the RL agent's reward buffer for this minibatch. This is the purpose of the 3rd line in (3) above. 
