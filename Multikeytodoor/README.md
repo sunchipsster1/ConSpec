@@ -4,7 +4,6 @@
 # ConSpec
 
 ## Information
-This code is built on top of several publically available repositories from different sources.
 
 The basic PPO code was taken from the repository: https://github.com/ikostrikov/pytorch-a2c-ppo-acktr-gail
 
