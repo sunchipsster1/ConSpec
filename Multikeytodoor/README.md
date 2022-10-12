@@ -6,18 +6,18 @@
 ## Information
 This code is built on top of several publically available repositories from different sources.
 
-The basic PPO code was taken from the public repository: https://github.com/ikostrikov/pytorch-a2c-ppo-acktr-gail
+The basic PPO code was taken from the repository: https://github.com/ikostrikov/pytorch-a2c-ppo-acktr-gail
 
-The pycolab tasks codebase was taken from the public repository: https://github.com/deepmind/deepmind-research/tree/master/tvt
+The pycolab tasks codebase was taken from the repository: https://github.com/deepmind/deepmind-research/tree/master/tvt
 
 ## Installation
-All the requirements to create an environment are in the requirements.txt file
+To create the environment, install packages from the requirements.txt file
 
 
 
 ### Launching
 
-To run ConSpec on the 4-key task, run the following ( max reward = 1): 
+To run ConSpec on the 4-key task, run the following: 
 
 
 ```
