@@ -4,9 +4,11 @@
 # ConSpec on the OrangeTree task
 
 ## Information
+The 3D environments were built in SilicoLabs Experimenter software (https://www.silicolabs.ca/), which is based on the Unity framework. 
+
 This code is built on top of the basic PPO code taken from the repository: https://github.com/ikostrikov/pytorch-a2c-ppo-acktr-gail
 
-The 3D environments were built in SilicoLabs Experimenter software (https://www.silicolabs.ca/), which is based on the Unity framework. 
+The interface between the environment and Pytorch was built on top of ML agents: https://github.com/Unity-Technologies/ml-agents
 
 
 ## Installation
