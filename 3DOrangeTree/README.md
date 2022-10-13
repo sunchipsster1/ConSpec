@@ -6,7 +6,7 @@
 ## Information
 The 3D environments were designed and built in SilicoLabs Experimenter software (https://www.silicolabs.ca/), which is built on top of Unity. 
 
-This code is built on top of the basic PPO code taken from the repository: https://github.com/ikostrikov/pytorch-a2c-ppo-acktr-gail
+The ConSpec code is built on top of the basic PPO code taken from the repository: https://github.com/ikostrikov/pytorch-a2c-ppo-acktr-gail
 
 The interface between the environment and Pytorch was built on top of ML-agents: https://github.com/Unity-Technologies/ml-agents
 
