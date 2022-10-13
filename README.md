@@ -5,7 +5,7 @@
 
 ### Chen Sun, Wannan Yang, Benjamin Alsbury-Nealy, Yoshua Bengio, Blake Richards 2022
 
-This repository implements contrastive introspection (ConSpec) as detailed in the paper: 
+This repository implements contrastive introspection (ConSpec) as detailed in the paper: https://arxiv.org/pdf/2210.05845.pdf
 
 The Multikeytodoor subfolder implements ConSpec with a PPO backbone in multi-door-to-key tasks. 
 
