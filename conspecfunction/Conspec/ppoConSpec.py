@@ -76,7 +76,7 @@ class PPOConSpec():
         #'''
         print('intrinsic R!')
 
-        return rollouts.contrastvalueReward(sendContrastvalue)
+        return sendContrastvalue #rollouts.contrastvalueReward(sendContrastvalue)
 
     def update(self, rollouts, head, keysUsed,goodones,iterate):
         advantages = rollouts.returns[:-1] - rollouts.value_preds[:-1]
