@@ -1,11 +1,11 @@
 
 
 
-# Contrastive Introspection (ConSpec) 
+# Contrastive Retrospection (ConSpec) 
 
-### Chen Sun, Wannan Yang, Benjamin Alsbury-Nealy, Yoshua Bengio, Blake Richards 2022
+### Chen Sun, Wannan Yang, Thomas Jiralerspong, Dane Malenfant, Benjamin Alsbury-Nealy, Yoshua Bengio, Blake Richards 2023
 
-This repository implements contrastive introspection (ConSpec) as detailed in the paper: https://arxiv.org/pdf/2210.05845.pdf
+This repository implements contrastive Retrospection (ConSpec) as detailed in the paper: https://arxiv.org/pdf/2210.05845.pdf
 
 The Multikeytodoor subfolder implements ConSpec with a PPO backbone in multi-door-to-key tasks. 
 
