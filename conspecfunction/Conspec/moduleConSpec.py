@@ -15,16 +15,17 @@ class moduleCL(nn.Module):
     def __init__(self,
                  input_size, hidden_size, head, device):
         super(moduleCL, self).__init__()
-        self.head = head
+        self.head = head # TODO: change this to num_heads (everywhere)
         self.input_size = input_size
         self.hidden_size = hidden_size
         self.layers = [None] * head
         self.device = device
 
-        self.main = nn.ModuleList([nn.Sequential(
+        # TODO: What is the difference between main and layers and layers2 -> make more clear
+        self.main = nn.ModuleList([nn.Sequential( 
             (nn.Linear(in_features=input_size, out_features=hidden_size, bias=False)), nn.ReLU(),
         ) for i in range(head)])
-        self.layers = nn.ModuleList([nn.Sequential(
+        self.layers = nn.ModuleList([nn.Sequential( 
             (nn.Linear(in_features=hidden_size, out_features=hidden_size,bias=False)), nn.ReLU(),
         ) for i in range(head)])
 
@@ -32,6 +33,7 @@ class moduleCL(nn.Module):
             torch.randn(1, self.hidden_size) * 1.) for i
             in range(head)])
 
+        # TODO: change to something like self.cosine_similarity -> better to have a long and clear name than a short unclear one
         self.cos = nn.CosineSimilarity(dim=2, eps=1e-6)
 
     def forward(self, hidden, reward, keyused, obs, time, seed, doimage):  # obs =  [600, 16, 1, 54, 64

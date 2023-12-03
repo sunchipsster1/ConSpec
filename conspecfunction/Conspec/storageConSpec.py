@@ -40,7 +40,7 @@ class RolloutStorage(object):
         self.successTake = 16
         self.hidden_state_size = 256
 
-        self.obs_batchheadsS = [None] * self.heads
+        self.obs_batchheadsS = [None] * self.heads # TODO: all the names here are TERRIBLE
         self.r_batchheadsS = [None] * self.heads
         self.recurrent_hidden_statesbatchheadsS = [None] * self.heads
         self.act_batchheadsS = [None] * self.heads
