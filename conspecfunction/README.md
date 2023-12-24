@@ -39,8 +39,8 @@ conspecfunction = ConSpec(args,   obsspace,  env.num_actions,  device)
         reward_intrinsic_extrinsic  = conspecfunction.do_everything(obstotal, recurrent_hidden_statestotal, actiontotal, rewardtotal, maskstotal)
         rollouts.storereward(reward_intrinsic_extrinsic)
 ```
-the purpose here is to: 
-        1. retrieve the current minibatch of trajectory (including its observations, rewards, hidden states, actions, masks)
-        2. "do everything" that ConSpec needs to do internally for training, and output the intrinsic + extrinsic reward for the current minibatch of trajectories
-        3. store this total reward in the memory buffer 
+the purpose of these last 3 lines is to: 
+i. retrieve the current minibatch of trajectory (including its observations, rewards, hidden states, actions, masks)
+ii. "do everything" that ConSpec needs to do internally for training, and output the intrinsic + extrinsic reward for the current minibatch of trajectories
+iii. store this total reward in the memory buffer 
 
