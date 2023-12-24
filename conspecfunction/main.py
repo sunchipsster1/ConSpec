@@ -30,9 +30,6 @@ from six.moves import range
 from six.moves import zip
 import tensorflow.compat.v1 as tf
 
-###############CONSPEC FUNCTION##############################
-##############################################################
-
 
 
 '''
