@@ -22,7 +22,8 @@ python -u main.py --pycolab_game key_to_door4
 ```
 
 This function (conspecfunction) is meant to be a self-contained function and can be added to any RL agent of choice. 
-To use this function in another RL backbone, 4 steps need to be done. These 3 steps are written out for convenience below. They can be seen in working order in main.py
+To use this function in any  RL backbone, 3 simple steps need to be done (stated below). **A working example showing these lines of code added into an RL training loop is seen in main.py**
+
 
 1. Load the "Conspec" subfolder into your codebase. This subfolder contains 5 files. 
 
@@ -32,7 +33,7 @@ from Conspec.ConSpec import ConSpec
 conspecfunction = ConSpec(args,   obsspace,  env.num_actions,  device)
 ```
    
-4. In your RL training loop, simply add the 3 lines below.    
+3. In your RL training loop, simply add the 3 lines below.    
 ```
         obstotal, rewardtotal, recurrent_hidden_statestotal, actiontotal,  maskstotal  = rollouts.release()
         reward_intrinsic_extrinsic  = conspecfunction.do_everything(obstotal, recurrent_hidden_statestotal, actiontotal, rewardtotal, maskstotal)
@@ -43,4 +44,3 @@ the purpose here is to:
         2. "do everything" that ConSpec needs to do internally for training, and output the intrinsic + extrinsic reward for the current minibatch of trajectories
         3. store this total reward in the memory buffer 
 
-**A working example showing these lines of code added into an RL training loop is seen in main.py**
