@@ -12,7 +12,9 @@ The interface between the environment and Pytorch was built on top of ML-agents:
 
 
 ## Installation
-Make sure  to unzip the 3 environment binary files that are contained in this subfolder. 
+There are 3 environment binary files that need to be 
+1) downloaded from the Google Drive https://drive.google.com/drive/folders/1azC6fJoQjth_rcDm499HfetS7AU9vUtB?usp=sharing
+2) unzipped
 To create this environment, install the packages in the requirements.txt file
 In main.py --> modify the directory line 52. The directory line should where you placed the environment files. 
 
