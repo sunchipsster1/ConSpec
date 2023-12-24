@@ -14,12 +14,14 @@ To create the environment install the packages from the requirements.txt file in
 
 
 ### Launching
+
 To see conspecfunction in action with an underlying PPO agent on a 4-key task (fig. 4 of the paper), run: 
 ```
 python -u main.py --pycolab_game key_to_door4  
 ```
 
 ### Using ConSpec on top of any other RL agent of choice
+
 This function (conspecfunction) is meant to be a self-contained function and can be added to any RL agent of choice. 
 To use this function in any  RL backbone, 3 simple steps need to be done (stated below). **A working example showing these lines of code added into an RL training loop is seen in main.py**
 
