@@ -109,7 +109,6 @@ class ConSpec(nn.Module):
         prototypes_used, count_prototypes_timesteps_criterion = self.rollouts.retrieve_prototypes_used()
         wwtotalpos = []
         wwtotalneg = []
-        attentionCL = []
         costCL = 0
         if self.rollouts.stepS > self.rollouts.success - 1:
             ########################
@@ -119,17 +118,15 @@ class ConSpec(nn.Module):
                         j)
                 else:
                     obs_batch, recurrent_hidden_states_batch, masks_batch, actions_batch, obs_batchorig, reward_batch = self.rollouts.retrieve_SFbuffer()
-                costCL0, attentionCL0, ww = self.calc_cos_scores(obs_batch, recurrent_hidden_states_batch, masks_batch,
+                cost_prototype, _, cos_scores = self.calc_cos_scores(obs_batch, recurrent_hidden_states_batch, masks_batch,
                                                         actions_batch, obs_batchorig, j)
-
-                cossimtotalmaxxx, _ = (torch.max(attentionCL0, dim=0))
-                attentionCL.append(attentionCL0[:, :, j].squeeze().transpose(1, 0))
-                costCL += costCL0
-                wwtotalpos.append(ww[0][j].detach().cpu())
-                wwtotalneg.append(ww[1][j].detach().cpu())
+                
+                costCL += cost_prototype
+                cos_scores_pos.append(cos_scores[0][j].detach().cpu())
+                cos_scores_neg.append(cos_scores[1][j].detach().cpu())
 
             for i in range(self.num_prototypes):
-                if (wwtotalpos[i] - wwtotalneg[i] > 0.6) and wwtotalpos[i] > 0.6:
+                if (cos_scores_pos[i] - cos_scores_neg[i] > 0.6) and cos_scores_pos[i] > 0.6:
                     count_prototypes_timesteps_criterion[i] += 1
                 else:
                     count_prototypes_timesteps_criterion[i] = 0
